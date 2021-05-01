@@ -12,7 +12,7 @@ class General(commands.Cog):
     async def hello(self, ctx):
         await ctx.send("Hello, I am your Event Reminder!")
 
-    @commands.command(aliases = ["HELLO"])
+    @commands.command(aliases = ["test"])
     async def test1(self,ctx):
         await ctx.send("AYO THIS COMMAND IS WORKING :D")
 
