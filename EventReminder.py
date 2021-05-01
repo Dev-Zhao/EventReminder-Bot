@@ -6,7 +6,7 @@ token = os.getenv("EVENT_REMINDER_TOKEN")
 
 if __name__ == '__main__':
     client = commands.Bot(command_prefix= "-")
-
+    client.remove_command('help')
 
     @client.event
     async def on_ready():
@@ -41,3 +41,4 @@ if __name__ == '__main__':
     print("-------------------")
 
     client.run(token)
+

@@ -10,7 +10,7 @@ class General(commands.Cog):
     #commands
     @commands.command(aliases = ['hi'])
     async def hello(self, ctx):
-        await ctx.send("Hello, I am Chad")
+        await ctx.send("Hello, I am your Event Reminder!")
 
 
 def setup(client):
