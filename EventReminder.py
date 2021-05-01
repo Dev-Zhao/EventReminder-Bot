@@ -1,10 +1,17 @@
 import discord
 from discord.ext import commands
 import os
-
-token = os.getenv("EVENT_REMINDER_TOKEN")
+from dotenv import load_dotenv
 
 if __name__ == '__main__':
+
+    token = os.getenv("BOTTOKEN")
+
+    if token is None:
+        load_dotenv()
+        token = os.environ.get("BOTTOKEN")
+
+
     client = commands.Bot(command_prefix= "-")
     client.remove_command('help')
 
