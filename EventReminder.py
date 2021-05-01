@@ -2,7 +2,7 @@ import discord
 from discord.ext import commands
 import os
 
-token = os.environ("DISCORD_TOKEN")
+token = os.environ["DISCORD_TOKEN"]
 
 if __name__ == '__main__':
     client = commands.Bot(command_prefix= "-")
