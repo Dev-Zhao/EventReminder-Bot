@@ -12,7 +12,7 @@ if __name__ == '__main__':
         token = os.environ.get("DISCORD_TOKEN")
 
 
-    client = commands.Bot(command_prefix= "%")
+    client = commands.Bot(command_prefix= "+")
     client.remove_command('help')
 
     @client.event
