@@ -6,11 +6,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="81fd148b-0b7c-4a80-9be6-82acae9f97bb" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cogs/About.py" beforeDir="false" afterPath="$PROJECT_DIR$/cogs/About.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cogs/General.py" beforeDir="false" afterPath="$PROJECT_DIR$/cogs/General.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cogs/Onetime.py" beforeDir="false" afterPath="$PROJECT_DIR$/cogs/Onetime.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cogs/Weekly.py" beforeDir="false" afterPath="$PROJECT_DIR$/cogs/Weekly.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cogs/GoogleAPI.py" beforeDir="false" afterPath="$PROJECT_DIR$/cogs/GoogleAPI.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,7 +27,6 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
@@ -68,19 +63,7 @@
       </list>
     </recent_temporary>
   </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
-  </component>
-  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="false" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -109,13 +92,12 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1021" y="499" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1619910474938">
@@ -147,10 +129,10 @@
     </state>
     <state x="508" y="250" key="SettingsEditor/0.0.1504.963@0.0.1504.963" timestamp="1619975519365" />
     <state x="1162" y="428" key="SettingsEditor/0.0.2560.1400@0.0.2560.1400" timestamp="1619911466262" />
-    <state x="819" y="533" key="Vcs.Push.Dialog.v2" timestamp="1619923278695">
+    <state x="819" y="533" key="Vcs.Push.Dialog.v2" timestamp="1619995075428">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="819" y="533" key="Vcs.Push.Dialog.v2/0.0.2560.1400@0.0.2560.1400" timestamp="1619923278695" />
+    <state x="819" y="533" key="Vcs.Push.Dialog.v2/0.0.2560.1400@0.0.2560.1400" timestamp="1619995075428" />
     <state x="449" y="306" key="com.intellij.ide.util.TipDialog" timestamp="1619988415527">
       <screen x="0" y="0" width="1504" height="963" />
     </state>
