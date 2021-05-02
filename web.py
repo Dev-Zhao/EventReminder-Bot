@@ -104,39 +104,11 @@ def oauth2callback():
   googleevents.update(
     { "userID": flask.request.args['state'] },
     {
-      "$set": {"credentials": credentials }
+      "$set": {"credentials": credentials_to_dict(credentials) }
     }
   )
 
   return bytes("hi", "utf-8")
-
-
-@app.route('/revoke')
-def revoke():
-  if 'credentials' not in flask.session:
-    return ('You need to <a href="/authorize">authorize</a> before ' +
-            'testing the code to revoke credentials.')
-
-  credentials = google.oauth2.credentials.Credentials(
-    **flask.session['credentials'])
-
-  revoke = requests.post('https://oauth2.googleapis.com/revoke',
-      params={'token': credentials.token},
-      headers = {'content-type': 'application/x-www-form-urlencoded'})
-
-  status_code = getattr(revoke, 'status_code')
-  if status_code == 200:
-    return('Credentials successfully revoked.' + print_index_table())
-  else:
-    return('An error occurred.' + print_index_table())
-
-
-@app.route('/clear')
-def clear_credentials():
-  if 'credentials' in flask.session:
-    del flask.session['credentials']
-  return ('Credentials have been cleared.<br><br>' +
-          print_index_table())
 
 
 def credentials_to_dict(credentials):
