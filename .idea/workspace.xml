@@ -20,9 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4f5cf9c7-5f61-49d4-b86a-acdbcd53ca5d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GoogleAPI.py" beforeDir="false" afterPath="$PROJECT_DIR$/GoogleAPI.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/google175fe4a0c26aaf2b.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,13 +139,13 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1162" y="428" key="SettingsEditor/0.0.2560.1400@0.0.2560.1400" timestamp="1619911466262" />
-    <state x="819" y="533" key="Vcs.Push.Dialog.v2" timestamp="1619918777331">
+    <state x="819" y="533" key="Vcs.Push.Dialog.v2" timestamp="1619919500338">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="819" y="533" key="Vcs.Push.Dialog.v2/0.0.2560.1400@0.0.2560.1400" timestamp="1619918777331" />
-    <state x="907" y="564" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1619916469208">
+    <state x="819" y="533" key="Vcs.Push.Dialog.v2/0.0.2560.1400@0.0.2560.1400" timestamp="1619919500338" />
+    <state x="907" y="564" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1619919398696">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="907" y="564" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.2560.1400@0.0.2560.1400" timestamp="1619916469208" />
+    <state x="907" y="564" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.2560.1400@0.0.2560.1400" timestamp="1619919398696" />
   </component>
 </project>
