@@ -11,7 +11,7 @@ class About(commands.Cog):
     # commands
     @commands.command()
     async def info(self, ctx):
-        command_prefix = "-"
+        command_prefix = "+"
         msg = f"I'm a bot created for RUHacks2021 by xxsuka#7765, 100bandz#6828, aco#1225, charr#2956 !\n Server count: {len(self.client.guilds)}\n use {command_prefix}help to get help on the different bot categories and commands!"
         embed = discord.Embed(
             title = "EventReminderInfo",
@@ -20,14 +20,14 @@ class About(commands.Cog):
         )
         await ctx.send('', embed = embed)
 
-    @commands.command(aliases = ['chad'])
+    @commands.command(aliases = ['EventReminder'])
     @commands.has_permissions(embed_links=True)
     async def help(self, ctx, query=None):
-        command_prefix = "-"
+        command_prefix = "+"
         cogs_list = [c.capitalize() for c in self.client.cogs]
         cogs_desc = ""
         commands_desc = ""
-        private_cogs = []
+        private_cogs = ['Settings']
         embed = ""
         if query is None:
             for cog in self.client.cogs:
