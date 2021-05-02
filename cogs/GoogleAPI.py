@@ -21,7 +21,7 @@ class GoogleAPI(commands.Cog):
         data = response.json()
         newUser = {"userID": str(ctx.message.author.id), "authorization_url": str(data['authorization_url'])}
         self.googleevents.insert_one(newUser)
-        await ctx.send(data['authorization_url'])
+        await ctx.message.author.send(data['authorization_url'])
 
 
 
