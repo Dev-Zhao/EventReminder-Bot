@@ -38,8 +38,7 @@ def index():
 
 @app.route('/calendar')
 def test_api_request():
-
-  result = googleevents.find({"userID": flask.request.args["_id"]})
+  result = googleevents.find_one({"userID": flask.request.args["userID"]})
 
   if result == None:
     return '', 404
@@ -57,7 +56,7 @@ def test_api_request():
   # ACTION ITEM: In a production app, you likely want to save these
   #              credentials in a persistent database instead.
   googleevents.update(
-    { "userID": flask.request.args['state'] },
+    { "userID": flask.request.args["userID"] },
     {
       "$set": {"credentials": credentials }
     }
