@@ -20,7 +20,7 @@ class Weekly(commands.Cog):
         self.userweeklyevents = self.database["userweeklyevents"]
 
 
-    @commands.command()
+    @commands.command(aliases = ['addw'])
     async def addweekly(self, ctx, day, time,  *,info = None):
         '''
         new_weekly_event = {
@@ -54,7 +54,7 @@ class Weekly(commands.Cog):
         await ctx.send(embed = embed)
 
 
-    @commands.command()
+    @commands.command(aliases = ['listw'])
     async def listweekly(self, ctx):
         user_events = list(self.userweeklyevents.find({"userID" : ctx.message.author.id}, { "_id": 0 , "userID" : 0}))
 
@@ -78,7 +78,7 @@ class Weekly(commands.Cog):
         await ctx.send(f"<@{ctx.message.author.id}>")
         await ctx.send(embed = embed)
 
-    @commands.command()
+    @commands.command(aliases = ['deletew'])
     async def deleteweekly(self, ctx, date, time):
         #arg 1 is date arg 2 is time
         dates = ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"]
@@ -108,7 +108,7 @@ class Weekly(commands.Cog):
 
         await ctx.send(embed=embed)
 
-    @commands.command()
+    @commands.command(aliases = [])
     async def removeallweekly(self, ctx):
         if (self.userweeklyevents.count_documents({"userID": ctx.message.author.id})) != 0:
             self.userweeklyevents.delete_many({"userID" : ctx.message.author.id})

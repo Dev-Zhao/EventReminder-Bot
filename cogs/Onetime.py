@@ -20,7 +20,7 @@ class Onetime(commands.Cog):
 
 
     '''add a user's one time event'''
-    @commands.command()
+    @commands.command(aliases = ['add'])
     async def addevent(self, ctx, time, *,info = None):
         # arg1 = time in military hours XX:YY
         # args = event details
@@ -43,7 +43,7 @@ class Onetime(commands.Cog):
 
 
     ''' list a user's one time event'''
-    @commands.command()
+    @commands.command(aliases = ['list'])
     async def listevent(self, ctx):
 
         user_events = list(self.useronetimeevents.find({"userID" : ctx.message.author.id}, { "_id": 0 , "userID" : 0, "channelID" : 0 }))
@@ -61,7 +61,7 @@ class Onetime(commands.Cog):
         await ctx.send(embed = embed)
 
     '''remove a user onetime event'''
-    @commands.command()
+    @commands.command(aliases = ['deleteevent', 'remove', 'delete'])
     async def removeevent(self, ctx, time):
         '''remove a users event taking place at a specific time, removes the first instance'''
 
@@ -77,7 +77,7 @@ class Onetime(commands.Cog):
             embed.add_field(name = "Invalid Format", value = "```Make sure your time is in the format HH:MM where 0 <= HH <= 24 and 0 <= MM <= 59 ```")
             await ctx.send(embed = embed)
 
-    @commands.command()
+    @commands.command(aliases = ['deleteallevents', 'removeall', 'deleteall'])
     async def removeallevents(self, ctx):
         if (self.useronetimeevents.count_documents({"userID": str(ctx.message.author.id)})) != 0:
             self.useronetimeevents.delete_many({"userID" : str(ctx.message.auhor.id)})
