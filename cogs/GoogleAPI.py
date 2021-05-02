@@ -8,7 +8,7 @@ class GoogleAPI(commands.Cog):
 
     #commands
     @commands.command(aliases = ['import'])
-    async def hello(self, ctx):
+    async def importFromGoogle(self, ctx):
         await ctx.send("Hello, I am your Event Reminder!")
 
 
