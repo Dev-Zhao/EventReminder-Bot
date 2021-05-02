@@ -14,14 +14,8 @@ CLIENT_SECRETS_FILE = "client_id.json"
 
 # This OAuth 2.0 access scope allows for full read/write access to the
 # authenticated user's account and requires requests to use an SSL connection.
-SCOPES = ['https://www.googleapis.com/auth/calendar.calendarlist.readonly',
-          'https://www.googleapis.com/auth/calendar.events.public.readonly',
-          'https://www.googleapis.com/auth/calendar.readonly',
-          'https://www.googleapis.com/auth/calendar.calendars.readonly',
-          'https://www.googleapis.com/auth/calendar.events',
-          'https://www.googleapis.com/auth/calendar.events.owned',
-          'https://www.googleapis.com/auth/calendar.events.owned.readonly',
-          'https://www.googleapis.com/auth/calendar.events.readonly']
+SCOPES = ['https://www.googleapis.com/auth/calendar',
+          'https://www.googleapis.com/auth/calendar.events']
 API_SERVICE_NAME = 'calendar'
 API_VERSION = 'v3'
 
