@@ -12,6 +12,7 @@ What things you need to use Event Reminder
 
 
 * [Discord](https://discord.com/)
+* [Google Account](https://www.google.com/account/about/)
 
 
 ## Running the bot
@@ -27,6 +28,10 @@ All commands use the + prefix
 +help weekly -> Outputs the menu for your weekly schedule commands
 
 +help Onetime -> Outputs the menu for same-day schedule commands
+
++import -> Allows for Google authentication with your preexiting Google Calendar events
+
++calendar ->Outputs your preexisting Google Calendar events on screen and integrates them with Event Reminder
 ```
 
 ## Deployment
