@@ -42,7 +42,7 @@ def test_api_request():
 
   if result == None:
     return '', 404
-
+  print(result['credentials'])
   # Load credentials from the session.
   credentials = google.oauth2.credentials.Credentials(
       **result['credentials'])
