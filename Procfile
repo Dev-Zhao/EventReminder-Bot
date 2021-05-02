@@ -1,2 +1,2 @@
 worker: python EventReminder.py
-web: gunicorn index:app
+web: gunicorn GoogleAPI:app
