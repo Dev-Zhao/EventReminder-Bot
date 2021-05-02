@@ -75,7 +75,7 @@ def authorize():
   flask.session['state'] = state
 
   print(authorization_url, file=sys.stderr)
-  data = {'authorization_url': 'authorization_url'}
+  data = {'authorization_url': authorization_url}
   return data
 
 
