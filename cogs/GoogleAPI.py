@@ -43,10 +43,10 @@ class GoogleAPI(commands.Cog):
                 count = 0
                 for event in events['items']:
                     count += 1
-                    if "description" in event:
+                    if "description" in event and "start" in event and "dateTime" in event["start"]:
                         embed_field = (f"\n -------| {event['summary']} |------- \n Time: {event['start']['dateTime']} - {event['end']['dateTime']} \n {event['description']}")
                     else:
-                        embed_field = (f"\n -------| {event['summary']} |------- \n Time: {event['start']['dateTime']} - {event['end']['dateTime']}")
+                        embed_field = (f"\n -------| {event['summary']} |------- ")
                     embed.add_field(name=f"Event{count}", value=f"```{embed_field}```", inline=False)
                     if count == 5:
                         break
