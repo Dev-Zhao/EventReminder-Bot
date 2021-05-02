@@ -22,7 +22,7 @@ app = flask.Flask(__name__)
 # Note: A secret key is included in the sample so that it works.
 # If you use this code in your application, replace this with a truly secret
 # key. See https://flask.palletsprojects.com/quickstart/#sessions.
-app.secret_key = flask.Flask.secret_key
+app.secret_key = b"\xec\x15,]\xbd\xe6\xeb\xd2\xf0'\x86(Xx\xdd\x9b\x91i-OC\x91Y\xd6"
 
 
 @app.route('/')
@@ -75,7 +75,9 @@ def authorize():
   flask.session['state'] = state
 
   print(authorization_url, file=sys.stderr)
-  return flask.jsonify(authorization=authorization_url)
+  data = {'authorization_url': 'authorization_url'}
+  return data
+
 
 @app.route('/oauth2callback')
 def oauth2callback():
