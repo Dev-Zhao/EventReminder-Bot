@@ -15,7 +15,7 @@ class GoogleAPI(commands.Cog):
 
     #commands
     @commands.command(aliases = ['import'])
-    async def importFromGoogle(self, ctx, email):
+    async def importFromGoogle(self, ctx):
         params = {"uid": ctx.message.author.id}
         response = requests.get("https://event-reminder-discord-bot.herokuapp.com/authorize", params=params)
         data = response.json()
