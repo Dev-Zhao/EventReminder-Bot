@@ -24,13 +24,16 @@ app = flask.Flask(__name__)
 # key. See https://flask.palletsprojects.com/quickstart/#sessions.
 app.secret_key = b"\xec\x15,]\xbd\xe6\xeb\xd2\xf0'\x86(Xx\xdd\x9b\x91i-OC\x91Y\xd6"
 
+DBCRED = os.environ.get("DBCRED")
+database = pymongo.MongoClient(self.DBCRED)["ruhacks"]
+googleevents = database["googleevents"]
 
 @app.route('/')
 def index():
   return flask.render_template('index.html')
 
 
-@app.route('/test')
+@app.route('/calendar')
 def test_api_request():
   if 'credentials' not in flask.session:
     return flask.redirect('authorize')
@@ -82,8 +85,11 @@ def authorize():
 
 @app.route('/oauth2callback')
 def oauth2callback():
+  authorization_response = flask.request.url
+
   # Specify the state when creating the flow in the callback so that it can
   # verified in the authorization server response.
+  print(flask.request.args)
   state = flask.session['state']
 
   flow = google_auth_oauthlib.flow.Flow.from_client_secrets_file(
@@ -91,7 +97,7 @@ def oauth2callback():
   flow.redirect_uri = flask.url_for('oauth2callback', _external=True)
 
   # Use the authorization server's response to fetch the OAuth 2.0 tokens.
-  authorization_response = flask.request.url
+
   flow.fetch_token(authorization_response=authorization_response)
 
   # Store credentials in the session.
