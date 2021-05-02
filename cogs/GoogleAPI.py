@@ -40,12 +40,14 @@ class GoogleAPI(commands.Cog):
                              icon_url="https://shotatlife.org/wp-content/uploads/2018/07/google-calendar-icon-png.png")
             while True:
                 events = response.json()
+                count = 0
                 for event in events['items']:
+                    count += 1
                     if "description" in event:
                         embed_field = (f"\n -------| {event['summary']} |------- \n Time: {event['start']['dateTime']} - {event['end']['dateTime']} \n {event['description']}")
                     else:
                         embed_field = (f"\n -------| {event['summary']} |------- \n Time: {event['start']['dateTime']} - {event['end']['dateTime']}")
-                    embed.add_field(name=day, value=f"```{embed_field}```", inline=False)
+                    embed.add_field(name=f"Event{count}", value=f"```{embed_field}```", inline=False)
                 page_token = events.get('nextPageToken')
                 if not page_token:
                     break
