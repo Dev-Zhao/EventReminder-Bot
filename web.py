@@ -101,10 +101,7 @@ def oauth2callback():
   # ACTION ITEM: In a production app, you likely want to save these
   #              credentials in a persistent database instead.
   credentials = flow.credentials
-  print("Credentials: ")
-  print("")
-  print(credentials)
-  googlevents.update(
+  googleevents.update(
     { "userID": flask.request.args['state'] },
     {
       "$set": {"credentials": credentials }
