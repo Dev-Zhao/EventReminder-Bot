@@ -39,7 +39,7 @@ def index():
 @app.route('/calendar')
 def test_api_request():
 
-  result = googleevents.find({"_id": flask.request.args["_id"]})
+  result = googleevents.find({"userID": flask.request.args["_id"]})
 
   if result == None:
     return '', 404
@@ -57,7 +57,7 @@ def test_api_request():
   # ACTION ITEM: In a production app, you likely want to save these
   #              credentials in a persistent database instead.
   googleevents.update(
-    { "_id": flask.request.args['state'] },
+    { "userID": flask.request.args['state'] },
     {
       "$set": {"credentials": credentials }
     }
@@ -84,7 +84,7 @@ def authorize():
       access_type='offline',
       # Enable incremental authorization. Recommended as a best practice.
       include_granted_scopes='true',
-      state=flask.request.args["_id"])
+      state=flask.request.args["userID"])
 
   print(authorization_url, file=sys.stderr)
   data = {'authorization_url': authorization_url}
@@ -111,7 +111,7 @@ def oauth2callback():
   #              credentials in a persistent database instead.
   credentials = flow.credentials
   googleevents.update(
-    { "_id": flask.request.args['state'] },
+    { "userID": flask.request.args['state'] },
     {
       "$set": {"credentials": credentials_to_dict(credentials) }
     }
