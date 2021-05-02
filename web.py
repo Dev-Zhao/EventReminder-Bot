@@ -58,7 +58,7 @@ def test_api_request():
   googleevents.update(
     { "userID": flask.request.args["userID"] },
     {
-      "$set": {"credentials": credentials }
+      "$set": {"credentials": credentials_to_dict(credentials) }
     }
   )
   print(events)
