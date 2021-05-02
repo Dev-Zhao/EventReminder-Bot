@@ -41,7 +41,10 @@ class GoogleAPI(commands.Cog):
             while True:
                 events = response.json()
                 for event in events['items']:
-                    embed_field = (f"\n -------| {event['summary']} |------- \n Time: {event['start']['dateTime']} - {event['end']['dateTime']} \n {event['description']}")
+                    if "description" in event:
+                        embed_field = (f"\n -------| {event['summary']} |------- \n Time: {event['start']['dateTime']} - {event['end']['dateTime']} \n {event['description']}")
+                    else:
+                        embed_field = (f"\n -------| {event['summary']} |------- \n Time: {event['start']['dateTime']} - {event['end']['dateTime']}")
                     embed.add_field(name=day, value=f"```{embed_field}```", inline=False)
                 page_token = events.get('nextPageToken')
                 if not page_token:
