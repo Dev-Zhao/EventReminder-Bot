@@ -42,12 +42,12 @@ class GoogleAPI(commands.Cog):
                 events = response.json()
                 count = 0
                 for event in events['items']:
-                    count += 1
                     if "summary" in event and "description" in event and "start" in event and "dateTime" in event["start"]:
                         embed_field = (f"\n -------| {event['summary']} |------- \n Time: {event['start']['dateTime']} - {event['end']['dateTime']} \n {event['description']}")
-                    embed.add_field(name=f"Event{count}", value=f"```{embed_field}```", inline=False)
-                    if count == 5:
-                        break
+                        embed.add_field(name=f"Event{count}", value=f"```{embed_field}```", inline=False)
+                        count += 1
+                        if count == 5:
+                            break
 
                 page_token = events.get('nextPageToken')
                 if not page_token:
