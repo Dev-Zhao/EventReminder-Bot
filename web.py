@@ -61,7 +61,7 @@ def test_api_request():
       "$set": {"credentials": credentials_to_dict(credentials) }
     }
   )
-  print(events)
+  print(events, file=sys.stderr)
   return flask.jsonify(**events)
 
 
@@ -85,7 +85,6 @@ def authorize():
       include_granted_scopes='true',
       state=flask.request.args["userID"])
 
-  print(authorization_url, file=sys.stderr)
   data = {'authorization_url': authorization_url}
   return data
 
