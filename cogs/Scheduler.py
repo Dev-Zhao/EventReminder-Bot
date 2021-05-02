@@ -19,6 +19,7 @@ class Scheduler(commands.Cog):
         self.useronetimeevents = self.database["userevents"]
 
 
+
     @commands.command()
     async def readylol(self,ctx):
         await ctx.send("hi it worked")
@@ -77,6 +78,14 @@ class Scheduler(commands.Cog):
             embed.set_author(name="Scheduler Bot | Created for RUHacks 2021", icon_url="https://shotatlife.org/wp-content/uploads/2018/07/google-calendar-icon-png.png")
             embed.add_field(name = "Invalid Format", value = "```Make sure your time is in the format HH:MM where 0 <= HH <= 24 and 0 <= MM <= 59 ```")
             await ctx.send(embed = embed)
+
+    @commands.command()
+    async def removeallevents(self, ctx):
+        if (self.useronetimeevents.count_documents({"userID": str(ctx.message.author.id)})) != 0:
+            self.useronetimeevents.delete_many({"userID" : str(ctx.message.auhor.id)})
+            await ctx.send("All of your events have been deleted!")
+        else:
+            await ctx.send("You don't have any events to be deleted!")
 
     '''one time event checker!'''
     @tasks.loop(seconds = 120)

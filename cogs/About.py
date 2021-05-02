@@ -12,7 +12,13 @@ class About(commands.Cog):
     @commands.command()
     async def info(self, ctx):
         command_prefix = "-"
-        await ctx.send(f"``` I'm a bot created for RUHacks2021 by xxsuka#7765, 100bandz#6828, aco#1225, charr#2956 !\n Server count: {len(self.client.guilds)}\n use {command_prefix}help to get help on the different bot categories and commands! ```")
+        msg = f"I'm a bot created for RUHacks2021 by xxsuka#7765, 100bandz#6828, aco#1225, charr#2956 !\n Server count: {len(self.client.guilds)}\n use {command_prefix}help to get help on the different bot categories and commands!"
+        embed = discord.Embed(
+            title = "EventReminderInfo",
+            description = msg,
+            color = discord.Color.purple()
+        )
+        await ctx.send('', embed = embed)
 
     @commands.command(aliases = ['chad'])
     @commands.has_permissions(embed_links=True)
