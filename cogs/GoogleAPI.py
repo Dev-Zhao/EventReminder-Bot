@@ -32,7 +32,7 @@ class GoogleAPI(commands.Cog):
         params = {"_id": ctx.message.author.id}
         response = requests.get("https://event-reminder-discord-bot.herokuapp.com/calendar", params=params)
 
-        if response.status-code == 404:
+        if response.status_code == 404:
             await ctx.message.author.send("Use the 'import' command first")
 
         embed = discord.Embed(title="Your Google Calendar Events", color=0xf3c4ea)
