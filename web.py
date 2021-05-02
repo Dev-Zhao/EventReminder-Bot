@@ -14,8 +14,7 @@ CLIENT_SECRETS_FILE = "client_secret_464056054365-n17ssc4td11rte9fgf8jb3v5vi7e9v
 
 # This OAuth 2.0 access scope allows for full read/write access to the
 # authenticated user's account and requires requests to use an SSL connection.
-SCOPES = ['https://www.googleapis.com/auth/calendar',
-          'https://www.googleapis.com/auth/calendar.events']
+SCOPES = ['https://www.googleapis.com/auth/calendar', 'https://www.googleapis.com/auth/calendar.events']
 API_SERVICE_NAME = 'calendar'
 API_VERSION = 'v3'
 
@@ -75,6 +74,7 @@ def authorize():
   # Store the state so the callback can verify the auth server response.
   flask.session['state'] = state
 
+  print(SCOPES, file=sys.stderr)
   print(authorization_url, file=sys.stderr)
 
   return flask.redirect(authorization_url)
