@@ -35,6 +35,16 @@ if __name__ == '__main__':
     async def unload(ctx, extension):
         client.unload_extension(f"cogs.{extension}")
 
+        #reload comamnd
+    @client.command()
+    @commands.is_owner()
+    async def reload(ctx, cog):
+        try:
+            client.reload_extension(f"cogs.{cog}")
+            await ctx.send(f"The extension cogs.{cog} was reloaded")
+        except:
+            await ctx.send(f"The extension cogs.{cog} could not be reloaded or does not exist")
+
 
     print("-------------------")
     for cog in os.listdir("./cogs"):
