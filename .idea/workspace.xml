@@ -20,7 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4f5cf9c7-5f61-49d4-b86a-acdbcd53ca5d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/EventReminder.py" beforeDir="false" afterPath="$PROJECT_DIR$/EventReminder.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GoogleAPI.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Procfile" beforeDir="false" afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/google175fe4a0c26aaf2b.html" beforeDir="false" afterPath="$PROJECT_DIR$/google175fe4a0c26aaf2b.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,9 +47,15 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="ProjectId" id="1rxPuZXh0FHScgNgei426lDx2zv" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/google175fe4a0c26aaf2b.html" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -80,6 +91,7 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -120,17 +132,21 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1021" y="499" key="#com.intellij.fileTypes.FileTypeChooser/0.0.2560.1400@0.0.2560.1400" timestamp="1619910474938" />
+    <state x="1200" y="481" key="FileChooserDialogImpl" timestamp="1619913910675">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1200" y="481" key="FileChooserDialogImpl/0.0.2560.1400@0.0.2560.1400" timestamp="1619913910675" />
     <state x="1162" y="428" key="SettingsEditor" timestamp="1619911466262">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1162" y="428" key="SettingsEditor/0.0.2560.1400@0.0.2560.1400" timestamp="1619911466262" />
-    <state x="819" y="533" key="Vcs.Push.Dialog.v2" timestamp="1619911689072">
+    <state x="819" y="533" key="Vcs.Push.Dialog.v2" timestamp="1619916366529">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="819" y="533" key="Vcs.Push.Dialog.v2/0.0.2560.1400@0.0.2560.1400" timestamp="1619911689072" />
-    <state x="907" y="564" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1619910409760">
+    <state x="819" y="533" key="Vcs.Push.Dialog.v2/0.0.2560.1400@0.0.2560.1400" timestamp="1619916366529" />
+    <state x="907" y="564" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1619916469208">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="907" y="564" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.2560.1400@0.0.2560.1400" timestamp="1619910409760" />
+    <state x="907" y="564" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.2560.1400@0.0.2560.1400" timestamp="1619916469208" />
   </component>
 </project>
