@@ -7,6 +7,7 @@
   <component name="ChangeListManager">
     <list default="true" id="81fd148b-0b7c-4a80-9be6-82acae9f97bb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_id.json" beforeDir="false" afterPath="$PROJECT_DIR$/client_secret_464056054365-n17ssc4td11rte9fgf8jb3v5vi7e9v9e.apps.googleusercontent.com.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web.py" beforeDir="false" afterPath="$PROJECT_DIR$/web.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -34,6 +35,11 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/cogs" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Charlie\PycharmProjects\EventReminder-Bot" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
@@ -80,6 +86,10 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1021" y="499" key="#com.intellij.fileTypes.FileTypeChooser/0.0.2560.1400@0.0.2560.1400" timestamp="1619910474938" />
+    <state x="1003" y="614" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1619968003542">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1003" y="614" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1619968003542" />
     <state x="1200" y="481" key="FileChooserDialogImpl" timestamp="1619913910675">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
@@ -88,10 +98,10 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1162" y="428" key="SettingsEditor/0.0.2560.1400@0.0.2560.1400" timestamp="1619911466262" />
-    <state x="819" y="533" key="Vcs.Push.Dialog.v2" timestamp="1619966840960">
+    <state x="819" y="533" key="Vcs.Push.Dialog.v2" timestamp="1619967368221">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="819" y="533" key="Vcs.Push.Dialog.v2/0.0.2560.1400@0.0.2560.1400" timestamp="1619966840960" />
+    <state x="819" y="533" key="Vcs.Push.Dialog.v2/0.0.2560.1400@0.0.2560.1400" timestamp="1619967368221" />
     <state x="907" y="564" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1619922780722">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
