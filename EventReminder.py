@@ -4,12 +4,12 @@ import os
 
 if __name__ == '__main__':
 
-    token = os.getenv("BOTTOKEN")
+    token = os.getenv("DISCORD_TOKEN")
 
     if token is None:
         from dotenv import load_dotenv
         load_dotenv()
-        token = os.environ.get("BOTTOKEN")
+        token = os.environ.get("DISCORD_TOKEN")
 
 
     client = commands.Bot(command_prefix= "*")
