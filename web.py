@@ -62,7 +62,7 @@ def test_api_request():
       "$set": {"credentials": credentials_to_dict(credentials) }
     }
   )
-
+  print(events)
   return flask.jsonify(**events)
 
 
