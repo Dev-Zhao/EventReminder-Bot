@@ -75,10 +75,7 @@ def authorize():
       access_type='offline',
       # Enable incremental authorization. Recommended as a best practice.
       include_granted_scopes='true',
-      state=flask.request.args.get("uid"))
-
-  # Store the state so the callback can verify the auth server response.
-  flask.session['state'] = state
+      state=flask.request.args["uid"])
 
   print(authorization_url, file=sys.stderr)
   data = {'authorization_url': authorization_url}
@@ -92,7 +89,7 @@ def oauth2callback():
   # Specify the state when creating the flow in the callback so that it can
   # verified in the authorization server response.
   print(flask.request.args)
-  state = flask.session['state']
+  state = flask.request.args['state']
 
   flow = google_auth_oauthlib.flow.Flow.from_client_secrets_file(
       CLIENT_SECRETS_FILE, scopes=SCOPES, state=state)
@@ -106,9 +103,14 @@ def oauth2callback():
   # ACTION ITEM: In a production app, you likely want to save these
   #              credentials in a persistent database instead.
   credentials = flow.credentials
-  flask.session['credentials'] = credentials_to_dict(credentials)
+  googlevents.update(
+    { "userID": flask.request.args['state'] },
+    {
+      "$set": {"credentials": credentials }
+    }
+  )
 
-  return flask.redirect(flask.url_for('test_api_request'))
+  return bytes("hi", "utf-8")
 
 
 @app.route('/revoke')
