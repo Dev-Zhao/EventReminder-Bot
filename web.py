@@ -27,7 +27,7 @@ app = flask.Flask(__name__)
 app.secret_key = b"\xec\x15,]\xbd\xe6\xeb\xd2\xf0'\x86(Xx\xdd\x9b\x91i-OC\x91Y\xd6"
 
 DBCRED = os.environ.get("DBCRED")
-database = pymongo.MongoClient(self.DBCRED)["ruhacks"]
+database = pymongo.MongoClient(DBCRED)["ruhacks"]
 googleevents = database["googleevents"]
 
 @app.route('/')
