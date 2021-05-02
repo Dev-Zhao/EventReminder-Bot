@@ -29,7 +29,7 @@ class GoogleAPI(commands.Cog):
     #commands
     @commands.command(aliases = ['calendar'])
     async def listCalendarEvents(self, ctx):
-        params = {"_id": ctx.message.author.id}
+        params = {"userID": ctx.message.author.id}
         response = requests.get("https://event-reminder-discord-bot.herokuapp.com/calendar", params=params)
 
         if response.status_code == 404:
