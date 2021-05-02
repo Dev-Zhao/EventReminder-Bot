@@ -84,8 +84,6 @@ def authorize():
 
 @app.route('/oauth2callback')
 def oauth2callback():
-  authorization_response = flask.request.url
-
   # Specify the state when creating the flow in the callback so that it can
   # verified in the authorization server response.
   print(flask.request.args)
@@ -96,13 +94,16 @@ def oauth2callback():
   flow.redirect_uri = flask.url_for('oauth2callback', _external=True)
 
   # Use the authorization server's response to fetch the OAuth 2.0 tokens.
-
+  authorization_response = flask.request.url
   flow.fetch_token(authorization_response=authorization_response)
 
   # Store credentials in the session.
   # ACTION ITEM: In a production app, you likely want to save these
   #              credentials in a persistent database instead.
   credentials = flow.credentials
+  print("Credentials: ")
+  print("")
+  print(credentials)
   googlevents.update(
     { "userID": flask.request.args['state'] },
     {
@@ -161,6 +162,7 @@ if __name__ == '__main__':
   # ACTION ITEM for developers:
   #     When running in production *do not* leave this option enabled.
   os.environ['OAUTHLIB_INSECURE_TRANSPORT'] = '1'
+  os.environ['OAUTHLIB_RELAX_TOKEN_SCOPE'] = '1'
 
   # Specify a hostname and port that are set as a valid redirect URI
   # for your API project in the Google API Console.
