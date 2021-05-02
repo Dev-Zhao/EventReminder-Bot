@@ -6,10 +6,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="81fd148b-0b7c-4a80-9be6-82acae9f97bb" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web.py" beforeDir="false" afterPath="$PROJECT_DIR$/web.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -75,6 +72,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="1217" y="475" key="#Python" timestamp="1619961015798">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1217" y="475" key="#Python/0.0.2560.1400@0.0.2560.1400" timestamp="1619961015798" />
     <state x="1021" y="499" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1619910474938">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
@@ -87,10 +88,10 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1162" y="428" key="SettingsEditor/0.0.2560.1400@0.0.2560.1400" timestamp="1619911466262" />
-    <state x="819" y="533" key="Vcs.Push.Dialog.v2" timestamp="1619923278695">
+    <state x="819" y="533" key="Vcs.Push.Dialog.v2" timestamp="1619959893489">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="819" y="533" key="Vcs.Push.Dialog.v2/0.0.2560.1400@0.0.2560.1400" timestamp="1619923278695" />
+    <state x="819" y="533" key="Vcs.Push.Dialog.v2/0.0.2560.1400@0.0.2560.1400" timestamp="1619959893489" />
     <state x="907" y="564" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1619922780722">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>

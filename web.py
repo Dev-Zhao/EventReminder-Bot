@@ -1,3 +1,5 @@
+from __future__ import print_function
+import sys
 import os
 import flask
 import requests
@@ -79,6 +81,8 @@ def authorize():
   # Store the state so the callback can verify the auth server response.
   flask.session['state'] = state
 
+  print('???', file=sys.stderr)
+
   return flask.redirect(authorization_url)
 
 
@@ -156,5 +160,5 @@ if __name__ == '__main__':
 
   # Specify a hostname and port that are set as a valid redirect URI
   # for your API project in the Google API Console.
-  app.run('event-reminder-discord-bot.herokuapp.com/', 8080, debug=True)
+  app.run('event-reminder-discord-bot.herokuapp.com', 8080, debug=True)
 
