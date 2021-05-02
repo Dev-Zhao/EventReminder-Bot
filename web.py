@@ -74,11 +74,8 @@ def authorize():
   # Store the state so the callback can verify the auth server response.
   flask.session['state'] = state
 
-  print(flow.redirect_uri, file=sys.stderr)
   print(authorization_url, file=sys.stderr)
-
-  return flask.redirect(authorization_url)
-
+  return flask.jsonify(authorization=authorization_url)
 
 @app.route('/oauth2callback')
 def oauth2callback():
