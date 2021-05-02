@@ -1,18 +1,18 @@
 import discord
 from discord.ext import commands
 import os
-from dotenv import load_dotenv
 
 if __name__ == '__main__':
 
     token = os.getenv("BOTTOKEN")
 
     if token is None:
+        from dotenv import load_dotenv
         load_dotenv()
         token = os.environ.get("BOTTOKEN")
 
 
-    client = commands.Bot(command_prefix= "-")
+    client = commands.Bot(command_prefix= "*")
     client.remove_command('help')
 
     @client.event
