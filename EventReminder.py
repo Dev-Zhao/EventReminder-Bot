@@ -2,11 +2,18 @@ import discord
 from discord.ext import commands
 import os
 
-token = os.getenv("EVENT_REMINDER_TOKEN")
-
 if __name__ == '__main__':
-    client = commands.Bot(command_prefix= "-")
 
+    token = os.getenv("DISCORD_TOKEN")
+
+    if token is None:
+        from dotenv import load_dotenv
+        load_dotenv()
+        token = os.environ.get("DISCORD_TOKEN")
+
+
+    client = commands.Bot(command_prefix= "*")
+    client.remove_command('help')
 
     @client.event
     async def on_ready():
@@ -28,6 +35,16 @@ if __name__ == '__main__':
     async def unload(ctx, extension):
         client.unload_extension(f"cogs.{extension}")
 
+        #reload comamnd
+    @client.command()
+    @commands.is_owner()
+    async def reload(ctx, cog):
+        try:
+            client.reload_extension(f"cogs.{cog}")
+            await ctx.send(f"The extension cogs.{cog} was reloaded")
+        except:
+            await ctx.send(f"The extension cogs.{cog} could not be reloaded or does not exist")
+
 
     print("-------------------")
     for cog in os.listdir("./cogs"):
@@ -41,3 +58,4 @@ if __name__ == '__main__':
     print("-------------------")
 
     client.run(token)
+
