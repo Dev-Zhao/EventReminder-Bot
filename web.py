@@ -42,7 +42,7 @@ def test_api_request():
 
   if result == None:
     return '', 404
-  print(result['credentials'])
+
   # Load credentials from the session.
   credentials = google.oauth2.credentials.Credentials(
       **result['credentials'])
@@ -50,7 +50,7 @@ def test_api_request():
   calendar = googleapiclient.discovery.build(
       API_SERVICE_NAME, API_VERSION, credentials=credentials)
 
-  events = calendar.events().list(calendarId='primary', orderBy='startTime', pageToken=None).execute()
+  events = calendar.events().list(calendarId='primary', singleEvents=True, orderBy='startTime', pageToken=None).execute()
 
   # Save credentials back to session in case access token was refreshed.
   # ACTION ITEM: In a production app, you likely want to save these
