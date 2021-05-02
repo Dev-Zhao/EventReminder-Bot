@@ -16,6 +16,7 @@ class Scheduler(commands.Cog):
         load_dotenv()
         self.DBCRED = os.environ.get("DBCRED")
         self.database = pymongo.MongoClient(self.DBCRED)["ruhacks"]
+        self.userevents = self.database["userevents"]
 
 
     @commands.command()
@@ -30,10 +31,9 @@ class Scheduler(commands.Cog):
         # args = event details
 
         if bool(re.match("([0-9]|0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]", arg1)):
-            users = self.database["users"]
             details = "n/a" if args is None else args
             newUser = { "userID" : str(ctx.message.author.id) , "channelID" : str(ctx.message.channel.id) , "event_time" : arg1 , "event_details": details }
-            users.insert_one(newUser)
+            self.userevents.insert_one(newUser)
             embed=discord.Embed(title="New Event Created", color=0xf3c4ea)
             embed.set_author(name="Scheduler Bot | Created for RUHacks 2021", icon_url="https://shotatlife.org/wp-content/uploads/2018/07/google-calendar-icon-png.png")
             embed.add_field(name = arg1, value= f"```{details}```")
@@ -47,7 +47,7 @@ class Scheduler(commands.Cog):
     @commands.command()
     async def listevent(self, ctx):
 
-        user_events = list(self.database["users"].find({"userID" : str(ctx.message.author.id)}, { "_id": 0 , "userID" : 0, "channelID" : 0 }))
+        user_events = list(self.userevents.find({"userID" : str(ctx.message.author.id)}, { "_id": 0 , "userID" : 0, "channelID" : 0 }))
 
         embed=discord.Embed(color=0xf3c4ea)
         embed.set_author(name="Scheduler Bot | Created for RUHacks 2021", icon_url="https://shotatlife.org/wp-content/uploads/2018/07/google-calendar-icon-png.png")
@@ -67,9 +67,8 @@ class Scheduler(commands.Cog):
         '''remove a users event taking place at a specific time, removes the first instance'''
 
         if bool(re.match("([0-9]|0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]", arg1)):
-            users = self.database["users"]
-            if (users.count_documents({"userID" : str(ctx.message.author.id) , "event_time" : arg1}, limit = 1)) != 0:
-                users.delete_one({"userID" : str(ctx.message.author.id) , "event_time" : arg1})
+            if (self.userevents.count_documents({"userID" : str(ctx.message.author.id) , "event_time" : arg1}, limit = 1)) != 0:
+                self.userevents.delete_one({"userID" : str(ctx.message.author.id) , "event_time" : arg1})
                 await ctx.send(f"{ctx.author.mention} deleted event at {arg1}!" )
             else:
                 await ctx.send(f"{ctx.author.mention} You have no event at {arg1}!" )
@@ -88,8 +87,7 @@ class Scheduler(commands.Cog):
         current_time = time.strftime("%H:%M")
         current_time_int = int(current_time[:2])*60 + int(current_time[-2:]) 
 
-        users = self.database["users"]
-        events = list(users.find({},{ "_id": 0}))
+        events = list(self.userevents.find({},{ "_id": 0}))
 
         for event in events:
 
@@ -112,7 +110,7 @@ class Scheduler(commands.Cog):
                 embed.add_field(name=f"Event starting now @ {event_time} ", value=f"```{event_details}```")
                 await channel.send(f"<@{userID}>")
                 await channel.send(embed = embed)
-                users.delete_one({"userID":userID , "channelID":channelID, "event_time": event_time , "event_details" : event_details })
+                self.userevents.delete_one({"userID":userID , "channelID":channelID, "event_time": event_time , "event_details" : event_details })
             
             elif (event_time_int-current_time_int) <= 5:
                 print(event)
