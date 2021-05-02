@@ -16,7 +16,7 @@ CLIENT_SECRETS_FILE = "client_secret_464056054365-n17ssc4td11rte9fgf8jb3v5vi7e9v
 
 # This OAuth 2.0 access scope allows for full read/write access to the
 # authenticated user's account and requires requests to use an SSL connection.
-SCOPES = ['https://www.googleapis.com/auth/calendar']
+SCOPES = ['https://www.googleapis.com/auth/calendar', 'https://www.googleapis.com/auth/calendar.readonly', 'https://www.googleapis.com/auth/calendar.events', 'https://www.googleapis.com/auth/calendar.events.readonly']
 API_SERVICE_NAME = 'calendar'
 API_VERSION = 'v3'
 
