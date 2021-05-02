@@ -75,7 +75,7 @@ def authorize():
       access_type='offline',
       # Enable incremental authorization. Recommended as a best practice.
       include_granted_scopes='true',
-      state=flask.request.args["uid"])
+      state=flask.request.args["_id"])
 
   print(authorization_url, file=sys.stderr)
   data = {'authorization_url': authorization_url}
@@ -102,13 +102,13 @@ def oauth2callback():
   #              credentials in a persistent database instead.
   credentials = flow.credentials
   googleevents.update(
-    { "userID": flask.request.args['state'] },
+    { "_id": flask.request.args['state'] },
     {
       "$set": {"credentials": credentials_to_dict(credentials) }
     }
   )
 
-  return bytes("hi", "utf-8")
+  return bytes("Success!", "utf-8")
 
 
 def credentials_to_dict(credentials):

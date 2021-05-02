@@ -16,13 +16,20 @@ class GoogleAPI(commands.Cog):
     #commands
     @commands.command(aliases = ['import'])
     async def importFromGoogle(self, ctx):
-        params = {"uid": ctx.message.author.id}
+        params = {"_id": ctx.message.author.id}
         response = requests.get("https://event-reminder-discord-bot.herokuapp.com/authorize", params=params)
+
         data = response.json()
-        newUser = {"userID": str(ctx.message.author.id), "authorization_url": str(data['authorization_url'])}
+        newUser = {"_id": str(ctx.message.author.id), "authorization_url": str(data['authorization_url'])}
         self.googleevents.insert_one(newUser)
+
+        await ctx.message.author.send("Please give authorization to access your Google Calendar")
         await ctx.message.author.send(data['authorization_url'])
 
+    #commands
+    @commands.command(aliases = ['calendar'])
+    async def listCalendarEvents(self, ctx):
+        await ctx.message.author.send("hi")
 
 
 def setup(client):
