@@ -6,9 +6,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="81fd148b-0b7c-4a80-9be6-82acae9f97bb" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/RUHacks2021.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/RUHacks2021.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cogs/GoogleAPI.py" beforeDir="false" afterPath="$PROJECT_DIR$/cogs/GoogleAPI.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web.py" beforeDir="false" afterPath="$PROJECT_DIR$/web.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EventReminder.py" beforeDir="false" afterPath="$PROJECT_DIR$/EventReminder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cogs/About.py" beforeDir="false" afterPath="$PROJECT_DIR$/cogs/About.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cogs/Scheduler.py" beforeDir="false" afterPath="$PROJECT_DIR$/cogs/Scheduler.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,29 +31,66 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/cogs" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Charlie\PycharmProjects\EventReminder-Bot" />
-    </key>
+  <component name="RunManager">
+    <configuration name="EventReminder" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="RUHacks2021" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/EventReminder.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.EventReminder" />
+      </list>
+    </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="81fd148b-0b7c-4a80-9be6-82acae9f97bb" name="Default Changelist" comment="" />
-      <created>1619927759869</created>
+      <created>1619975454643</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1619927759869</updated>
+      <updated>1619975454643</updated>
     </task>
     <servers />
   </component>
@@ -70,38 +109,52 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1217" y="475" key="#Python" timestamp="1619961015798">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state x="1217" y="475" key="#Python/0.0.2560.1400@0.0.2560.1400" timestamp="1619961015798" />
     <state x="1021" y="499" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1619910474938">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1021" y="499" key="#com.intellij.fileTypes.FileTypeChooser/0.0.2560.1400@0.0.2560.1400" timestamp="1619910474938" />
-    <state x="1003" y="614" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1619968003542">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state x="1003" y="614" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1619968003542" />
     <state x="1200" y="481" key="FileChooserDialogImpl" timestamp="1619913910675">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1200" y="481" key="FileChooserDialogImpl/0.0.2560.1400@0.0.2560.1400" timestamp="1619913910675" />
-    <state x="1162" y="428" key="SettingsEditor" timestamp="1619911466262">
-      <screen x="0" y="0" width="2560" height="1400" />
+    <state width="1483" height="256" key="GridCell.Tab.0.bottom" timestamp="1619976586247">
+      <screen x="0" y="0" width="1504" height="963" />
     </state>
+    <state width="1483" height="256" key="GridCell.Tab.0.bottom/0.0.1504.963@0.0.1504.963" timestamp="1619976586247" />
+    <state width="1483" height="256" key="GridCell.Tab.0.center" timestamp="1619976586247">
+      <screen x="0" y="0" width="1504" height="963" />
+    </state>
+    <state width="1483" height="256" key="GridCell.Tab.0.center/0.0.1504.963@0.0.1504.963" timestamp="1619976586247" />
+    <state width="1483" height="256" key="GridCell.Tab.0.left" timestamp="1619976586247">
+      <screen x="0" y="0" width="1504" height="963" />
+    </state>
+    <state width="1483" height="256" key="GridCell.Tab.0.left/0.0.1504.963@0.0.1504.963" timestamp="1619976586247" />
+    <state width="1483" height="256" key="GridCell.Tab.0.right" timestamp="1619976586247">
+      <screen x="0" y="0" width="1504" height="963" />
+    </state>
+    <state width="1483" height="256" key="GridCell.Tab.0.right/0.0.1504.963@0.0.1504.963" timestamp="1619976586247" />
+    <state x="508" y="250" key="SettingsEditor" timestamp="1619975519365">
+      <screen x="0" y="0" width="1504" height="963" />
+    </state>
+    <state x="508" y="250" key="SettingsEditor/0.0.1504.963@0.0.1504.963" timestamp="1619975519365" />
     <state x="1162" y="428" key="SettingsEditor/0.0.2560.1400@0.0.2560.1400" timestamp="1619911466262" />
-    <state x="819" y="533" key="Vcs.Push.Dialog.v2" timestamp="1619975432753">
+    <state x="819" y="533" key="Vcs.Push.Dialog.v2" timestamp="1619923278695">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="819" y="533" key="Vcs.Push.Dialog.v2/0.0.2560.1400@0.0.2560.1400" timestamp="1619975432753" />
+    <state x="819" y="533" key="Vcs.Push.Dialog.v2/0.0.2560.1400@0.0.2560.1400" timestamp="1619923278695" />
+    <state x="449" y="306" key="com.intellij.ide.util.TipDialog" timestamp="1619976158329">
+      <screen x="0" y="0" width="1504" height="963" />
+    </state>
+    <state x="449" y="306" key="com.intellij.ide.util.TipDialog/0.0.1504.963@0.0.1504.963" timestamp="1619976158329" />
     <state x="907" y="564" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1619922780722">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
