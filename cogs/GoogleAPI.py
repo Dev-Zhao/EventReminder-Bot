@@ -48,6 +48,9 @@ class GoogleAPI(commands.Cog):
                     else:
                         embed_field = (f"\n -------| {event['summary']} |------- \n Time: {event['start']['dateTime']} - {event['end']['dateTime']}")
                     embed.add_field(name=f"Event{count}", value=f"```{embed_field}```", inline=False)
+                    if count == 5:
+                        break
+
                 page_token = events.get('nextPageToken')
                 if not page_token:
                     break
