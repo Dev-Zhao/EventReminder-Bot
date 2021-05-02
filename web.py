@@ -69,7 +69,8 @@ def authorize():
       # re-prompting the user for permission. Recommended for web server apps.
       access_type='offline',
       # Enable incremental authorization. Recommended as a best practice.
-      include_granted_scopes='true')
+      include_granted_scopes='true',
+      state=flask.request.args.get("uid"))
 
   # Store the state so the callback can verify the auth server response.
   flask.session['state'] = state
