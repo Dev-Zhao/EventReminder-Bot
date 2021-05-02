@@ -3,6 +3,7 @@ import sys
 import os
 import flask
 import requests
+import time
 
 import google.oauth2.credentials
 import google_auth_oauthlib.flow
@@ -37,24 +38,32 @@ def index():
 
 @app.route('/calendar')
 def test_api_request():
-  if 'credentials' not in flask.session:
-    return flask.redirect('authorize')
+
+  result = googleevents.find({"_id": flask.request.args["_id"]})
+
+  if result == None:
+    return '', 404
 
   # Load credentials from the session.
   credentials = google.oauth2.credentials.Credentials(
-      **flask.session['credentials'])
+      **result['credentials'])
 
   calendar = googleapiclient.discovery.build(
       API_SERVICE_NAME, API_VERSION, credentials=credentials)
 
-  files = calendar.calendarList().list(pageToken=None).execute()
+  events = calendar.events().list(calendarId='primary', orderBy='startTime', pageToken=None).execute()
 
   # Save credentials back to session in case access token was refreshed.
   # ACTION ITEM: In a production app, you likely want to save these
   #              credentials in a persistent database instead.
-  flask.session['credentials'] = credentials_to_dict(credentials)
+  googleevents.update(
+    { "_id": flask.request.args['state'] },
+    {
+      "$set": {"credentials": credentials_to_dict(credentials) }
+    }
+  )
 
-  return flask.jsonify(**files)
+  return flask.jsonify(**events)
 
 
 @app.route('/authorize')
