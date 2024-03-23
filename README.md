@@ -58,9 +58,9 @@ You may now use Event Reminder to its full capacity!
 ## Authors
 
 * **Aco**  - [popovicaco](https://github.com/popovicaco)
-* **Charr**  - [charliezhao0916](https://github.com/charliezhao0916)
+* **Charlie**  - [charliezhao0916](https://github.com/charliezhao0916)
 * **Nico**  - [100Bandz](https://github.com/100Bandz)
-* **Suka**  - [maxpiorischin](https://github.com/maxpiorischin)
+* **Max**  - [maxpiorischin](https://github.com/maxpiorischin)
 
 
 ## Acknowledgments
