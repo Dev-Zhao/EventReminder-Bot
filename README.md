@@ -1,6 +1,5 @@
 # EventReminder-Bot
-RUhacks2021 project with xxsuka#7765, 100bandz#6828, aco#1225, charr#2956
-
+RUhacks2021 project with Aco, Charlie, Nico, and Max
 A discord bot that integrates Google Calendar's API; to make sure that people are able to keep track of all their important dates/reminders. 
 
 ## Getting Started
